@@ -33,6 +33,8 @@ function pcc_get_categories()
         echo "<tr>
             <td>" . ($index + 1) . "</td>
             <td>" . esc_html($cat->category_name) . "</td>
+
+            <td><button class='btn btn-sm btn-warning edit-category' data-id='{$cat->id}'>Edit</button></td>
             <td><button class='btn btn-sm btn-danger delete-category' data-id='{$cat->id}'>Delete</button></td>
         </tr>";
     }

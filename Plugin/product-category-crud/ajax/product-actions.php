@@ -67,6 +67,17 @@ function pcc_get_products()
             <td>{$p->total_stock}</td>
             <td>" . esc_html($p->category_name) . "</td>
             <td><img src='{$p->image}' width='50'></td>
+
+            <td><button class='btn btn-sm btn-warning edit-product' 
+            data-id='{$p->id}' 
+            data-name='{$p->product_name}' 
+            data-description='{$p->description}' 
+            data-unit-price='{$p->unit_price}' 
+            data-selling-price='{$p->selling_price}' 
+            data-stock='{$p->total_stock}' 
+            data-category-id='{$p->category_id}'
+            >Edit</button></td>
+
             <td><button class='btn btn-sm btn-danger delete-product' data-id='{$p->id}'>Delete</button></td>
         </tr>";
     }

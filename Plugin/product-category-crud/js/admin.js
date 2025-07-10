@@ -56,6 +56,32 @@ jQuery(document).ready(function($)
         });
     });
 
+    // Edit category
+    $(document).on('click', '.edit-category', function(){
+        const id = $(this).data('id');
+        const name = $(this).data('name');
+        $('#edit_cat_id').val(id);
+        $('#edit_cat_name').val(name);
+        $('#editCategoryModal').modal('show');        
+    });
+
+    //Update Category
+    $('#editCategoryForm').on('submit', function(e){
+    
+        e.preventDefault();
+        $.post(pcc_ajax.ajaxurl, {
+            action: 'pcc_update_category',
+            cat_id: $('#edit_cat_id').val(),
+            category_name: $('#edit_cat_name').val()
+        }, function(res) {
+            $('#categoryMsg').html(`<div class="alert alert-${res.success ? 'success' : 'danger'}">${res.data}</div>`);
+            if (res.success) {
+                $('#editCategoryModal').modal('hide');
+                loadCategories();
+            }
+        });
+    });
+
     // Load all products
     function loadProducts() 
     {

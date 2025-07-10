@@ -98,3 +98,81 @@ $categories = $wpdb->get_results("SELECT * FROM $cat_table");
         <tbody></tbody>
     </table>
 </div>
+
+<!--Category Modal-->
+<div class="modal fade" id="editCategoryModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form id="editCategoryForm" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Category</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <input type="hidden" name="cat_id" id="edit_cat_id">
+                    <label for="edit_cat_name">Category Name</label>
+                    <input type="text" class="form-control" id="edit_cat_name" required>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Update</button>
+                <button type="button" class="btn btn-secondary">Close</button>
+        </form>
+    </div>
+</div>
+
+
+<!--Product Modal-->
+<div class="modal fade" id="editProductModal">
+    <div class="modal-dialog" role="document">
+        <form id="editProductForm" class="modal-content" enctype="multipart/form-data">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Product</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="product_id" id="edit_product_id">
+                <div class="form-group">
+                    <label>Product Name</label><br>
+                    <input type="text" name="product_name" id="edit_product_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label><br>
+                    <textarea name="description" id="edit_product_description" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Unit Price</label><br>
+                    <input type="number" step="0.01" name="unit_price" id="edit_product_unit_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Selling Price</label><br>
+                    <input type="number" step="0.01" name="selling_price" id="edit_product_selling_price" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Stock</label><br>
+                    <input type="number" name="total_stock" id="edit_product_stock" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Category</label><br>
+                    <select name="category_id" id="edit_product_category_id" class="form-control" required>
+                        <option value="">Select</option>
+                        <?php foreach($categories as $cat): ?>
+                            <option value="<?= $cat->id ?>"><?= esc_html($cat->category_name) ?></option>
+                        <?php endforeach; ?>
+                    </select>       
+                </div>
+                <div class="form-group">
+                    <label>Image</label><br>
+                    <input type="file" name="image" class="form-control-file">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Update</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </form>
+    </div>
+</div>
