@@ -1,0 +1,98 @@
+/*
+Theme Name: araman-blogs
+Author: araman
+Author URI: https://www.aramanblogs.com
+Version: 1.0
+*/
+
+@import url("bootstrap.min.css");
+body
+{
+	font-family: "Gill sans","Gill Sans MT","Myriad Pro","Arial","sans serif";
+	font-size: 16px;
+	color: blue;
+}
+
+p
+{
+	line-height: 20px;
+}
+
+a:link, a:visited
+{
+	color: LightBlue;
+	text-decoration: none;
+}
+
+/* Menu Style */
+
+.nav-header ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.nav-header ul li
+{
+	display: inline-table;
+	list-style: none;
+	font-size: 18px;
+
+	padding-top: 3px;
+	padding-right: 4px;
+
+	width: 12%;
+	text-align: center;
+}
+
+.nav-header ul li
+{
+	background-color: #C1ECFA;
+}
+
+.nav-header a:hover
+{
+	color: green;
+}
+
+.nav-top ul li
+{
+	list-style: none;
+	float: right;
+	padding-right: 2%;
+	font-weight: bold;
+}
+
+.nav-footer ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.nav-footer ul:before, .nav-footer ul:after
+{
+	display: table;
+}
+
+.nav-footer ul li
+{
+	list-style: none;
+	float: right;
+	padding-right: 2%;
+}
+
+.sidebar
+{
+	float: right;
+}
+
+.custom-footer
+{
+	bottom: 0;
+	width: 100%;
+}
+
+.custom-footer li
+{
+	list-style: none;
+}
