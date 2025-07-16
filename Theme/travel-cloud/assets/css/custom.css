@@ -1,0 +1,149 @@
+/* Additional custom styles for TravelCloud theme */
+
+/* Blog card styles */
+.blog-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-card-content {
+    padding: 20px;
+}
+
+.entry-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.entry-title a {
+    color: #2c3e50;
+}
+
+.entry-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+/* User dashboard styles */
+.user-dashboard {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard-sidebar {
+    flex: 0 0 250px;
+    padding-right: 20px;
+}
+
+.dashboard-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-menu li {
+    margin-bottom: 5px;
+}
+
+.dashboard-menu a {
+    display: block;
+    padding: 10px 15px;
+    background: #f5f7fa;
+    color: #2c3e50;
+    border-radius: 4px;
+}
+
+.dashboard-menu li.active a,
+.dashboard-menu a:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.dashboard-section {
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-avatar {
+    margin-right: 20px;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+    
+    .dashboard-sidebar {
+        flex: 0 0 auto;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
