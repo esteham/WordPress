@@ -1,0 +1,110 @@
+/*
+Theme Name: TravelCloud
+Theme URI: https://github.com/esteham/wordpress/
+Author: Esteham H. Zihad Ansari
+Author URI: https://xetroot.com
+Description: A modern travel blog and booking theme for WordPress.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: travelcloud
+Tags: travel, blog, booking, responsive, custom-header, custom-menu, featured-images
+*/
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #004499;
+}
+
+/* Header styles */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    max-height: 60px;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-navigation li {
+    margin-left: 20px;
+}
+
+/* Content area */
+.site-content {
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-widget {
+    flex: 1;
+    padding: 0 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-navigation ul {
+        flex-direction: column;
+    }
+    
+    .footer-widgets {
+        flex-direction: column;
+    }
+    
+    .footer-widget {
+        margin-bottom: 20px;
+    }
+}
