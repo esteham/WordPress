@@ -13,13 +13,13 @@ get_template_part("nav");
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_1')); ?>" class="d-block w-100" alt="...">
+            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_1')); ?>" class="d-block w-100" alt="..." style="width: 1200px; height: 600px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_2')); ?>" class="d-block w-100" alt="...">
+            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_2')); ?>" class="d-block w-100" alt="..." style="width: 1200px; height: 600px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_3')); ?>" class="d-block w-100" alt="...">
+            <img src="<?php echo esc_url(get_theme_mod('my_theme_carousel_image_3')); ?>" class="d-block w-100" alt="..." style="width: 1200px; height: 600px; object-fit: cover;">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
